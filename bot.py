@@ -7,12 +7,11 @@ import platform
 
 # Constant
 client_token = os.environ.get('DISCORD_TOKEN')
-
+# Set's the bot's description and prexix to any command
 client = Bot(description='Hello!', command_prefix='?', pm_help=True)
+
+# main function that handles commands
 def main(): 
-
-	client = Bot(description='Hey all! Im the best!', command_prefix='?', pm_help=True)
-
 	@client.event
 
 	async def on_ready(): 
