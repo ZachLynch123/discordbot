@@ -18,33 +18,16 @@ client = Bot(description='Hello!', command_prefix='-', pm_help=False)
 # main function that handles commands
 @client.event
 async def on_ready():
-	print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
-	print('--------')
-	print('Current Discord.py Version: {} | Current Python Version: {}'.format(discord.__version__, platform.python_version()))
-	print('--------')
-	print('Use this link to invite {}:'.format(client.user.name))
-	print('')
-	print('--------')
-	print('')
-	print('')
-	print('--------')
-	print('')
+	print('Logged in as')
+	print(client.user.name)
+	print(client.user.id)
+	print('-------')
 
-@client.event
-async def on_message(message): 
-	if message.content.startswith('-random'): 
-		url_list = []
-		i = 0
-		items = imgur.gallery()
-		for item in items: 
-			url_list.append(item.link)
-			i = i +1
-		await client.send_message(message.channel, random.choice(url_list))
+@client.command(pass_context=True)
+async def ping(ctx): 
+	await client.say("pong!")
 
-@client.command()
-async def ping(*args):
 
-	await client.say(":ping_pong: Pong!")
 
 
 #async def random(): 
