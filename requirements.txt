@@ -8,6 +8,7 @@ discord.py==0.16.12
 idna==2.6
 imgurpython==1.1.7
 multidict==3.3.2
+opuslib==2.0.0
 pluggy==0.6.0
 py==1.5.2
 pycparser==2.18
