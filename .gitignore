@@ -8,3 +8,5 @@ lib/
 \.Python
 
 pip-selfcheck\.json
+
+spider\.py
